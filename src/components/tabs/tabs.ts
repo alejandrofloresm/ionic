@@ -122,8 +122,8 @@ import { ViewController } from '../../navigation/view-controller';
  * ```
  *
  * Then in your class you can grab the `Tabs` instance and call `select()`,
- * passing the index of the tab as the argument. Here we're grabbing the tabs
- * by using ViewChild.
+ * passing the index of the tab as the argument and the options for navigation. 
+ * Here we're grabbing the tabs by using ViewChild.
  *
  *```ts
  * export class TabsPage {
@@ -131,7 +131,8 @@ import { ViewController } from '../../navigation/view-controller';
  * @ViewChild('myTabs') tabRef: Tabs;
  *
  * ionViewDidEnter() {
- *   this.tabRef.select(2);
+ *   // No options were sent
+ *   this.tabRef.select(2, {});
  *  }
  *
  * }
